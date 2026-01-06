@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS MCQ Test - 100 Questions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-code"></i> HTML/CSS Mastery Test</h1>
+            <p class="subtitle">Test your knowledge with 100 challenging questions</p>
+        </header>
+
+        <div class="instructions">
+            <div class="instruction-card">
+                <i class="fas fa-info-circle"></i>
+                <h3>Test Instructions</h3>
+                <ul>
+                    <li>Answer all 100 questions at your own pace</li>
+                    <li>Select one answer for each question</li>
+                    <li>You can navigate using Previous/Next buttons</li>
+                    <li>Your score will be calculated at the end</li>
+                    <li>Click "Submit Test" when you're done</li>
+                </ul>
+            </div>
+
+            <div class="stats-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Your Progress</h3>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <p>Question: <span id="currentQuestion">1</span>/100</p>
+                <p>Answered: <span id="answeredCount">0</span>/100</p>
+            </div>
+        </div>
+
+        <main class="test-container">
+            <div class="question-container" id="questionContainer">
+                <!-- Questions will be loaded here by JavaScript -->
+            </div>
+
+            <div class="navigation">
+                <button id="prevBtn" class="nav-btn">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+
+                <div class="question-numbers">
+                    <button class="num-btn" onclick="goToQuestion(1)">1</button>
+                    <!-- More buttons will be added by JavaScript -->
+                </div>
+
+                <button id="nextBtn" class="nav-btn">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div class="actions">
+                <button id="submitBtn" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Submit Test
+                </button>
+
+                <button id="clearBtn" class="clear-btn">
+                    <i class="fas fa-broom"></i> Clear All Answers
+                </button>
+            </div>
+        </main>
+
+        <div class="result-container" id="resultContainer" style="display: none;">
+            <!-- Results will be shown here -->
+        </div>
+
+        <footer class="footer">
+            <p>© 2024 HTML/CSS MCQ Test | Categories: <span class="category-tag html">HTML</span> <span
+                    class="category-tag css">CSS</span></p>
+        </footer>
+    </div>
+
+    <!-- Include JavaScript files -->
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
